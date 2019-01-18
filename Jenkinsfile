@@ -16,7 +16,8 @@ pipeline {
         stage('Ejecutar Job'){
             steps{
                script{
-              switch(${params.JOBSTALEND}) {
+                   
+                  switch(params.JOBSTALEND) {
                   case "customer_view": 
                   echo "Ejecutando Job .... customer_view"  
                   sh 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNDIKfQ=='           
