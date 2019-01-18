@@ -25,7 +25,7 @@ pipeline {
 		   booleanParam(name:'CAN_DANCE',
 		                defaultValue: true,
 						description: 'Checkbox parameter')
-		   String(name: 'stpram',
+		   string(name: 'stpram',
 		          defaultValue: 'Dance!',
 				  description: 'Do the Funky')
 	}
