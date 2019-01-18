@@ -16,7 +16,7 @@ pipeline {
         stage('Ejecutar Job'){
             steps{
                script{
-                 def r 'Nada'
+                 def r = 'Nada'
                   switch(params.JOBSTALEND) {
                   case "customer_view": 
                   echo "Ejecutando Job .... customer_view"  
