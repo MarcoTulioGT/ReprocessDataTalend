@@ -2,15 +2,9 @@ pipeline {
     agent any
 	
 	parameters{
-	choice(name:'Job Talend',
-	       choices:'one\ntwo\nthree\nfour',
-		   description:'Cual Job Deseas Ejecutar?')
-		   booleanParam(name:'CAN_DANCE',
-		                defaultValue: true,
-						description: 'Checkbox parameter')
-		   string(name: 'stpram',
-		          defaultValue: 'Dance!',
-				  description: 'Do the Funky')
+	choice(name:'Jobs Talend', choices:'customer_view\ncontract_information\ncustomer_view_vas_sale\ncustomer_view_dpi\ncustomer_view_by_pssprt', description:'Cual Job Deseas Ejecutar?')
+    //booleanParam(name:'CAN_DANCE', defaultValue: true, description: 'Checkbox parameter')
+	//string(name: 'stpram', defaultValue: 'Dance!',  description: 'Do the Funky')
 	}
 	
 	
