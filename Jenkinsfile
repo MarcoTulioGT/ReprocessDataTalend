@@ -20,6 +20,11 @@ pipeline {
     stages {
 	stage('Seleccionar Job Talend') {
             steps {
+			parameters{
+        booleanParam(name:'CAN_DANCE', defaultValue: true, description: 'Checkbox parameter')
+	    
+	}
+	
                     script {	
                    echo 'Cambio Parametros'
 				   }
@@ -52,3 +57,11 @@ pipeline {
 	
     }
 }
+
+
+
+
+
+
+
+
