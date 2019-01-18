@@ -17,6 +17,20 @@ properties(projectProperties)
 
 pipeline {
     agent any
+	
+	parameters{
+	choice(name:'Job Talend',
+	       choices:'one\ntwo\nthree\nfour',
+		   description:'Cual Job Deseas Ejecutar?')
+		   booleanParam(name:'CAN_DANCE',
+		                defaultValue: true,
+						description: 'Checkbox parameter')
+		   String(name: 'stpram',
+		          defaultValue: 'Dance!',
+				  description: 'Do the Funky')
+	}
+	
+	
      environment {
     def branch = 'master'
     def pipelineName = 'Reproceso Jobs Talend'
