@@ -16,6 +16,9 @@ pipeline {
         stage('Ejecutar Job'){
             steps{
                script{
+                   if (params.JOBSTALEND != '') {
+                         input message: 'Requiere Aprobación',
+              parameters: [choice(name: 'Deploy Production', choices: 'NO\nSI', description: "Selecciona SI,  Si esta de acuerdo en ejecutar el Job ${params.JOBSTALEND} ")]
                  def r = 'Nada'
                   switch(params.JOBSTALEND) {
                   case "customer_view": 
@@ -44,6 +47,7 @@ pipeline {
                   echo " El resultado es "+ r
                   break
               }
+                   }
               }
             }
         }
