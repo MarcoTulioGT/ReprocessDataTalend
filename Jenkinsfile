@@ -93,20 +93,6 @@ pipeline {
 				   }
             }
         }
-
-        stage('Example') {
-            input {
-                message "Quieres Ejecutar el Job? ${params.JOBSTALEND}"
-                ok "Si, quiero ejecutar el ${params.JOBSTALEND}."
-                submitter "si,SI"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Talend', description: "Quieres Ejecutar el Job? ${params.JOBSTALEND}")
-                }
-            }
-            steps {
-                echo "Hello, ${PERSON}, nice to meet you."
-            }
-        }
 	
     }
 }
