@@ -28,22 +28,22 @@ pipeline {
                   break
                   case "contract_information": 
                   echo "Ejecutando Job .... contract_information" 
-                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNDIKfQ==', returnStdout: true)                      
+                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogMzIxCn0=', returnStdout: true)                      
                   echo " El resultado es "+ r
                   break
                   case "customer_view_vas_sale": 
                   echo "Ejecutando Job .... customer_view"
-                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNDIKfQ==', returnStdout: true)                       
+                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNDQxCn0=', returnStdout: true)                       
                   echo " El resultado es "+ r
                   break
                   case "customer_view_dpi": 
                   echo "Ejecutando Job .... customer_view_dpi"
-                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNDIKfQ==', returnStdout: true)                      
+                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNjAxCn0=', returnStdout: true)                      
                   echo " El resultado es "+ r
                   break
                   case "customer_view_by_pssprt": 
                   echo "Ejecutando Job .... customer_view_by_pssprt"
-                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNDIKfQ==', returnStdout: true)                       
+                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNjIxCn0=', returnStdout: true)                       
                   echo " El resultado es "+ r
                   break
               }
