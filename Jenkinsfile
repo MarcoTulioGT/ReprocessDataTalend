@@ -95,8 +95,8 @@ pipeline {
             allowMissing: false,
             alwaysLinkToLastBuild: false,
             keepAll: true,
-            reportDir: 'coverage',
-            reportFiles: 'https://github.com/golang/example/blob/master/appengine-hello/static/index.html',
+            reportDir: '',
+            reportFiles: 'index.html',
             reportName: 'RCov Report'
           ]
 		  
