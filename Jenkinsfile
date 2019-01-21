@@ -13,13 +13,17 @@ pipeline {
     def pipelineName = 'Reproceso Jobs Talend'
 }
     stages {
-        stage('Ejecutar Job ' params.JOBSTALEND ){
+        stage('Ejecutar Job '){
             steps{
                script{
                    if (params.JOBSTALEND != '') {
+				         timeout(time:1, unit:'DAYS'){
                          input message: 'Requiere Aprobación',
-              parameters: [choice(name: 'Deploy Production', choices: 'NO\nSI', description: "Selecciona SI,  Si esta de acuerdo en ejecutar el Job ${params.JOBSTALEND} ")]
-                 def r = 'Nada'
+                         parameters: [choice(name: 'Deploy Production', choices: 'NO\nSI', description: "Selecciona SI,  Si esta de acuerdo en ejecutar el Job ${params.JOBSTALEND} ")]
+			                                          }
+			        
+			  
+                  def r = 'Nada'
                   switch(params.JOBSTALEND) {
                   case "customer_view": 
                   echo "Ejecutando Job .... customer_view"  
