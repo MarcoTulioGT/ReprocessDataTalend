@@ -32,7 +32,7 @@ pipeline {
 									}
 						 }
 			        echo " el resultado de la decisión es : " + Uinput
-		 if (params.JOBSTALEND != ''  and  Uinput == 'SI') {	  
+		 if (params.JOBSTALEND != ''  &&  Uinput == 'SI') {	  
                   def r = 'Nada'
                   switch(params.JOBSTALEND) {
                   case "customer_view": 
