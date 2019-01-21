@@ -13,7 +13,7 @@ pipeline {
     def pipelineName = 'Reproceso Jobs Talend'
 }
     stages {
-        stage('Ejecutar Job ' + params.JOBSTALEND ){
+        stage('Ejecutar Job ' params.JOBSTALEND ){
             steps{
                script{
                    if (params.JOBSTALEND != '') {
