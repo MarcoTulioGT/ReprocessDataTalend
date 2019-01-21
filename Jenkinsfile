@@ -88,8 +88,20 @@ pipeline {
 		 stage('Revisar Monitoreo Kibana') {
             steps {
                     script {
-				   echo "Ejecutando Job .... ${params.JOBSTALEND}"					
-                  
+				   echo "Ejecutando Job .... ${params.JOBSTALEND}"	
+
+
+					  publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'coverage',
+            reportFiles: 'https://github.com/golang/example/blob/master/appengine-hello/static/index.html',
+            reportName: 'RCov Report'
+          ]
+		  
+		  
+                   
 				   }
             }
         }
