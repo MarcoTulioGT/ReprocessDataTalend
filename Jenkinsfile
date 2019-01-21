@@ -16,11 +16,22 @@ pipeline {
         stage('Ejecutar Job '){
             steps{
                script{
+			   def Uinput = true
                    if (params.JOBSTALEND != '') {
+				         try{
 				         timeout(time:1, unit:'DAYS'){
-                         input message: 'Requiere Aprobación',
+                         Uinput = input message: 'Requiere Aprobación',
                          parameters: [choice(name: 'Deploy Production', choices: 'NO\nSI', description: "Selecciona SI,  Si esta de acuerdo en ejecutar el Job ${params.JOBSTALEND} ")]
 			                                          }
+		                 }catch(err){
+						 def user = err.getCauses()[0].getUser()
+						  if('SYSTEM' == user.toString()) { 
+							didTimeout = true
+							} else {
+							userInput = false
+							echo "Aborted by: [${user}]"
+									}
+						 }
 			        
 			  
                   def r = 'Nada'
@@ -51,7 +62,7 @@ pipeline {
                   echo " El resultado es "+ r
                   break
               }
-                   }
+                   }else{  echo "this was not successful" }
               }
             }
         }
