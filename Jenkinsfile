@@ -121,8 +121,7 @@ pipeline {
 		  
 	   echo "http://172.22.49.29:5601/app/kibana#/dashboard/e1996d20-d6ea-11e8-be3c-1f2fb3696472?_g=(refreshInterval%3A(display%3A'1%20minute'%2Cpause%3A!f%2Csection%3A2%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-12h%2Cmode%3Aquick%2Cto%3Anow))"  
    
-	    mail body: "Url Job : ${env.BUILD_URL}"
-			    " ,
+	    mail body: "Url Job : ${env.BUILD_URL}\n http://172.22.49.29:5601/goto/f3e5f675df88a8ac8a67ff93a22fd39b ",
             from: 'jobjenkins@jenkins.com',
             replyTo: 'ctcatalan@tigo.com.gt',
             subject: 'project build Ok',
