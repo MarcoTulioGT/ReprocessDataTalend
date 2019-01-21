@@ -89,7 +89,7 @@ pipeline {
             steps {
                     script {
 				   echo "Ejecutando Job .... ${params.JOBSTALEND}"					
-                   <iframe src="http://172.22.49.29:5601/app/kibana#/dashboard/e1996d20-d6ea-11e8-be3c-1f2fb3696472?embed=true&_g=(refreshInterval%3A(display%3A'1%20minute'%2Cpause%3A!f%2Csection%3A2%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-12h%2Cmode%3Aquick%2Cto%3Anow))" height="600" width="800"></iframe>
+                  
 				   }
             }
         }
