@@ -121,21 +121,10 @@ pipeline {
 		  
 	   echo "http://172.22.49.29:5601/app/kibana#/dashboard/e1996d20-d6ea-11e8-be3c-1f2fb3696472?_g=(refreshInterval%3A(display%3A'1%20minute'%2Cpause%3A!f%2Csection%3A2%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-12h%2Cmode%3Aquick%2Cto%3Anow))"  
    
-	    mail body: """<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-</head>
-<body bgcolor="#ffffff" text="#000000">
-        project build error is here: ${env.BUILD_URL}<br>
-	<a href="http://172.22.49.29:5601/app/kibana#/dashboard/e1996d20-d6ea-11e8-be3c-1f2fb3696472?_g=(refreshInterval%3A(display%3A'1%20minute'%2Cpause%3A!f%2Csection%3A2%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-12h%2Cmode%3Aquick%2Cto%3Anow))">Dashboard DataEcosystem</a>
-<div class="moz-signature"><i><br>
-<br>
-Marco<br>
-Catalan<br>
-</i></div>
-</body>
-</html>" ,
+	    mail body: "Url Job : ${env.BUILD_URL}
+			    
+			http://172.22.49.29:5601/app/kibana#/dashboard/e1996d20-d6ea-11e8-be3c-1f2fb3696472?_g=(refreshInterval%3A(display%3A'1%20minute'%2Cpause%3A!f%2Csection%3A2%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-12h%2Cmode%3Aquick%2Cto%3Anow))
+			    " ,
             from: 'jobjenkins@jenkins.com',
             replyTo: 'ctcatalan@tigo.com.gt',
             subject: 'project build Ok',
