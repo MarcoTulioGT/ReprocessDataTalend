@@ -35,7 +35,7 @@ pipeline {
 			        echo " el resultado de la decisión es : " + Uinput
 			  
                   def r = 'Nada'
-                  switch(params.JOBSTALEND) {
+                  switch(params.JOBSTALEND and  Uinput == 'SI') {
                   case "customer_view": 
                   echo "Ejecutando Job .... customer_view"  
                   r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNDIKfQ==', returnStdout: true)           
@@ -62,7 +62,12 @@ pipeline {
                   echo " El resultado es "+ r
                   break
               }
-                   }else{  echo "this was not successful" }
+                   }else{ 
+			   
+			   echo "this was not successful" 
+			    currentBuild.result = "FAILURE"
+		   
+		   }
               }
             }
         }
