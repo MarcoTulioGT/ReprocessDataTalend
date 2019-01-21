@@ -97,7 +97,7 @@ pipeline {
             keepAll: true,
             reportDir: '',
             reportFiles: 'index.html',
-            reportName: 'RCov Report'
+            reportName: 'Reporte Talend Jobs'
           ]
 		  
 		  
