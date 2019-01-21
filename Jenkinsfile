@@ -63,7 +63,7 @@ pipeline {
               }
                    }else{ 
 			   
-			   echo "this was not successful" 
+			   echo "No se ejecutó el Job ${params.JOBSTALEND}" 
 			    currentBuild.result = "SUCCESS"
 		   
 		   }
