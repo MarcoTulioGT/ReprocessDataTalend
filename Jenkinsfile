@@ -19,7 +19,7 @@ pipeline {
 			   def Uinput = true
                    if (params.JOBSTALEND != '') {
 				         try{
-				         timeout(time:1, unit:'DAYS'){
+				         timeout(time: 60, unit:'SECONDS'){
                          Uinput = input message: 'Requiere Aprobación',
                          parameters: [choice(name: 'Deploy Production', choices: 'NO\nSI', description: "Selecciona SI,  Si esta de acuerdo en ejecutar el Job ${params.JOBSTALEND} ")]
 			                                          }
