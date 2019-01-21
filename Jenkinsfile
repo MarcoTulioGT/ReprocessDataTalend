@@ -32,7 +32,7 @@ pipeline {
 							echo "Aborted by: [${user}]"
 									}
 						 }
-			        echo " el resultado de la decisión es : " Uinput
+			        echo " el resultado de la decisión es : " + Uinput
 			  
                   def r = 'Nada'
                   switch(params.JOBSTALEND) {
