@@ -91,7 +91,7 @@ pipeline {
 				   echo "Ejecutando Job .... ${params.JOBSTALEND}"	
 
 
-					  publishHTML target: [
+          publishHTML target: [
             allowMissing: false,
             alwaysLinkToLastBuild: false,
             keepAll: true,
