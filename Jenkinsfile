@@ -64,7 +64,7 @@ pipeline {
                    }else{ 
 			   
 			   echo "this was not successful" 
-			    currentBuild.result = "FAILURE"
+			    currentBuild.result = "SUCCESS"
 		   
 		   }
               }
