@@ -52,12 +52,12 @@ pipeline {
                   break
                   case "customer_view_dpi": 
                   echo "Ejecutando Job .... customer_view_dpi"
-                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNjAxCn0=', returnStdout: true)                      
+                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInJ1blRhc2siLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJtb2RlIjogImFzeW5jaHJvbm91cyIsCiAgInRhc2tJZCI6IDYwMQp9', returnStdout: true)                      
                   echo " El resultado es "+ r
                   break
                   case "customer_view_by_pssprt": 
                   echo "Ejecutando Job .... customer_view_by_pssprt"
-                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInRhc2tMb2ciLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJsYXN0RXhlY3V0aW9uIjogdHJ1ZSwKICAidGFza0lkIjogNjIxCn0=', returnStdout: true)                       
+                  r = sh( script: 'curl -X GET --header "Content-Type:application/json"  http://172.22.37.21:8080/tac/metaServlet?ewogICJhY3Rpb25OYW1lIjogInJ1blRhc2siLAogICJhdXRoUGFzcyI6ICJUaWdvLjIwMTghIiwKICAiYXV0aFVzZXIiOiAiZHdoX2RndGxAdGlnby5jb20uZ3QiLAogICJtb2RlIjogImFzeW5jaHJvbm91cyIsCiAgInRhc2tJZCI6IDYyMQp9', returnStdout: true)                       
                   echo " El resultado es "+ r
                   break
               }
@@ -120,12 +120,12 @@ pipeline {
           ]
 		  
 	   echo "http://172.22.49.29:5601/app/kibana#/dashboard/e1996d20-d6ea-11e8-be3c-1f2fb3696472?_g=(refreshInterval%3A(display%3A'1%20minute'%2Cpause%3A!f%2Csection%3A2%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-12h%2Cmode%3Aquick%2Cto%3Anow))"  
-   
+       echo "http://172.22.37.70:8888/opscenter/index.html"
 	    mail body: "Url Job : ${env.BUILD_URL}\n http://172.22.49.29:5601/goto/f3e5f675df88a8ac8a67ff93a22fd39b ",
             from: 'jobjenkins@jenkins.com',
             replyTo: 'ctcatalan@tigo.com.gt',
-            subject: 'project build Ok',
-            to: 'ctcatalan@tigo.com.gt'
+            subject: "Ejecucción de Job  ${params.JOBSTALEND} ",
+            to: 'itoperaciones@tigo.com.gt'
 
 		}
             }
